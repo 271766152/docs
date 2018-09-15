@@ -6,6 +6,6 @@ README VUISDK_V2.0
 [*1. OverView*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/OverView.md)  
 [*2. QuickStart*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/QuickStart.md)  
 [*3. Demo*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/Demo.md)  
-[*4. AI*]()
+[*4. AI*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/AI.md)  
 [*5. InterfaceDocument*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/InterfaceDocument.md)  
 [*6. FAQ*](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/FAQ.md)  
