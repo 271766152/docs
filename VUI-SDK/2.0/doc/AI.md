@@ -270,7 +270,7 @@ if (!TextUtils.isEmpty(resultJson)) {
 ```
 
 
-*media 去播放音乐*  
+*MediaPlayer 去播放音乐*  
 ```Java
  public static void playByUrl(String url) {
         if (!TextUtils.isEmpty(url)) {
