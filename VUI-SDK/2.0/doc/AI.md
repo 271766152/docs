@@ -110,7 +110,7 @@ asr | 语音识别结果
 tts | tts相关内容 
 ai | AI请求相关 
 
--**AI部分概览**  
+- **AI部分概览**  
 
 Name | Description	
 ------------ | ------------ 
@@ -118,6 +118,15 @@ status | 本次AI请求是否成功
 query | 纠正后的Text  
 semantic | 语义部分  
 result | 返回的结果部分 
+
+- **语义部分概览**  
+
+Name | Description	
+------------ | ------------ 
+service |   
+action |   
+params |  
+outputContext | 当前语义上下文 
 
 
 *拿到了结果，我们去播放。*  
@@ -136,14 +145,8 @@ result | 返回的结果部分
 
 ```
 
-*那么问题来了，我们如何确定返回得Json中，要去做什么呢？这里就要引入一个概念，意图。关于意图得概念[传送门](https://github.com/271766152/docs/blob/master/Bot/2-RosAiDocument/1-SkillsKit/important-concept/intent.md)。*
-
 *解析 "service": "","action": "" 得到action做相应得处理*
+```Json
 
-
-
-
-
-
-
+```
 *当然除了这些，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
