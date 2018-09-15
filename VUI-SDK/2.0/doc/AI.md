@@ -1,7 +1,7 @@
 AI 解析
 =
 
-*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！*  
+*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！我们对它说“Hey~北京的天气怎么样？”。看看会发生什么。*  
 
 - **OnAIResponseListener  AI语义结果回调**  
 ```Java
