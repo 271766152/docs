@@ -230,7 +230,7 @@ outputContext | 当前语义上下文
 ```
 
 *解析 "service": "","action": "" 得到action做相应得处理*
-```Json
+```Java
 if (!TextUtils.isEmpty(resultJson)) {
             try {
                 JSONObject jsonObject = new JSONObject(resultJson);
@@ -268,4 +268,31 @@ if (!TextUtils.isEmpty(resultJson)) {
             }
         }
 ```
+
+
+*media 去播放音乐*  
+```Java
+ public static void playByUrl(String url) {
+        if (!TextUtils.isEmpty(url)) {
+            try {
+                mediaPlayer.reset();
+                mediaPlayer.setDataSource(url);
+                mediaPlayer.prepareAsync();
+                mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                    @Override
+                    public void onPrepared(MediaPlayer mp) {
+                        mediaPlayer.start();
+                    }
+                });
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void stop(){
+        mediaPlayer.stop();
+    }
+```
+
 *当然除了这些，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
