@@ -124,9 +124,8 @@ result | 返回的结果部分
 
 Name | Description	
 ------------ | ------------ 
-service |   
-action |   
-params |  
+service |  场景名称
+action |   动作名称
 outputContext | 当前语义上下文 
 
 
