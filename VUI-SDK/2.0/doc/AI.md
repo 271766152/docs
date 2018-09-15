@@ -123,9 +123,18 @@ timeout | Timeout 对象 | 超时参数,deprecated | Optional
 
 ```
 
+*如果不想听音乐，对他说“关闭”。*
+*接口返回*
+```Json
+
+```
+
 *那么问题来了，我们如何确定返回得Json中，要去做什么呢？这里就要引入一个概念，意图。关于意图得概念[传送门](https://github.com/271766152/docs/blob/master/Bot/2-RosAiDocument/1-SkillsKit/important-concept/intent.md)。*
 
 *解析 "service": "","action": "" 得到action做相应得处理*
+
+
+
 
 
 
