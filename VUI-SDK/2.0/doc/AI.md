@@ -8,14 +8,24 @@ AI 解析
     //设置AI回调接口。AI返回的结果都在此接口中回调，如果不需要AI结果，可以不设置此回调接口。
     OnAIResponseListener aiResponseListener = new OnAIResponseListener() {
         @Override
-        public void onResult(String json) {
+        public void onResult(final String json) {
+            Log.d(TAG, "onAIResponse: " + json);
             Log.e(TAG, "ai json: " + json);
-            handler.obtainMessage(MSG_SHOW_RESULT, json).sendToTarget();
+
+            String hint = AIResultParser.parserAudioUrlFromAIResultJSON(json);
+            if (!TextUtils.isEmpty(hint)) {
+                handler.obtainMessage(MSG_SHOW_RESULT, json).sendToTarget();
+                Message message = new Message();
+                message.obj = hint;
+                message.what = MSG_TTS_PLAYER;
+                handler.sendMessageDelayed(message, 1000);
+            }
         }
 
         @Override
-        public void onFail(RError message) {
-            Log.e(TAG, "ai fail: " + message.getFailDetail());
+        public void onFail(final RError rError) {
+            handler.obtainMessage(MSG_SHOW_RESULT,
+                    "AI error " + rError.getFailCode() + " " + rError.getFailDetail()).sendToTarget();
         }
     };
 ```
@@ -104,5 +114,19 @@ semantic | Semantic 对象 | 语义部分 | Optional
 results | Result 对象 | Result | Optional
 timeout | Timeout 对象 | 超时参数,deprecated | Optional
 
+*拿到了结果，我们去播放。*  
 
-*拿到了结果，我们去播放。当然除了这个天气场景，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
+*当然我们也可以让它给我们播放一首音乐，比如“给我播放东风破！”。*
+
+*接口返回*
+
+```Json
+
+```
+
+*那么问题来了，我们如何确定返回得Json中，要去做什么呢？这里就要引入一个概念，意图。关于意图得概念[传送门]()。*
+
+
+
+
+*当然除了这些，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
