@@ -1,7 +1,7 @@
-AI 解析
+AI 结果解析
 =
 
-*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！我们对它说“Hey~北京的天气怎么样？”。看看会发生什么。*  
+*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！我们对它说“北京的天气怎么样？”。看看会发生什么。*  
 
 - **OnAIResponseListener  AI语义结果回调**  
 ```Java
@@ -104,14 +104,13 @@ AI 解析
 
 - **协议概览**  
 
-Name	| Type	| Description	| Required
------------- | ------------ | ------------ | ------------
-reqId	| String	| 请求的唯一ID	| Required
-status | Status 对象 | Status | Required
-query |	String | 纠错后的Text query | Required
-semantic | Semantic 对象 | 语义部分 | Optional
-results | Result 对象 | Result | Optional
-timeout | Timeout 对象 | 超时参数,deprecated | Optional
+Name | Description	
+------------ | ------------ 
+apiVersion | sdk version 
+status | 本次请求是否成功
+asr | 语音识别结果
+tts | tts相关内容 
+ai | AI请求相关 
 
 *拿到了结果，我们去播放。*  
 
