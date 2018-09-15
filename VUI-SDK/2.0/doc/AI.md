@@ -231,6 +231,41 @@ outputContext | 当前语义上下文
 
 *解析 "service": "","action": "" 得到action做相应得处理*
 ```Json
+if (!TextUtils.isEmpty(resultJson)) {
+            try {
+                JSONObject jsonObject = new JSONObject(resultJson);
+                JSONObject aiJsonObject = jsonObject.optJSONObject("ai");
+                if (aiJsonObject != null) {
+                    JSONObject semanticJsonObject = aiJsonObject.optJSONObject("semantic");
+                    if (semanticJsonObject != null) {
+                        if ("Media".equals(semanticJsonObject.optString("service")) &&
+                                "Play".equals(semanticJsonObject.optString("action"))) {
+				
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+                Log.e(TAG, "parser error!");
+            }
+        }
 
+
+if (!TextUtils.isEmpty(resultJson)) {
+            try {
+                JSONObject jsonObject = new JSONObject(resultJson);
+                JSONObject aiJsonObject = jsonObject.optJSONObject("ai");
+                if (aiJsonObject != null) {
+                    JSONObject semanticJsonObject = aiJsonObject.optJSONObject("semantic");
+                    if (semanticJsonObject != null) {
+                        if ("Media".equals(semanticJsonObject.optString("service")) &&
+                                "Exit".equals(semanticJsonObject.optString("action"))) {
+				
+                        }
+                    }
+                }
+            } catch (JSONException e) {
+                Log.e(TAG, "parser error!");
+            }
+        }
 ```
 *当然除了这些，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
