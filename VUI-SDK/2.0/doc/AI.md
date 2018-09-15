@@ -10,7 +10,6 @@ AI 解析
         @Override
         public void onResult(final String json) {
             Log.d(TAG, "onAIResponse: " + json);
-            Log.e(TAG, "ai json: " + json);
 
             String hint = AIResultParser.parserAudioUrlFromAIResultJSON(json);
             if (!TextUtils.isEmpty(hint)) {
