@@ -1,4 +1,4 @@
-AI 结果解析
+AI Protocol
 =
 
 *接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！  
@@ -295,4 +295,3 @@ if (!TextUtils.isEmpty(resultJson)) {
     }
 ```
 
-*当然除了这些，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
