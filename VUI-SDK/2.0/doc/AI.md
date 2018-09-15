@@ -103,3 +103,6 @@ query |	String | 纠错后的Text query | Required
 semantic | Semantic 对象 | 语义部分 | Optional
 results | Result 对象 | Result | Optional
 timeout | Timeout 对象 | 超时参数,deprecated | Optional
+
+
+*拿到了结果，我们去播放。当然除了这个天气场景，我们还丰富了多种场景。[我是传送门](https://github.com/271766152/docs/tree/master/Bot/4-SkillDocument)。*  
