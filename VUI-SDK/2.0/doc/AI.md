@@ -1,7 +1,8 @@
 AI 结果解析
 =
 
-*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！我们对它说“北京的天气怎么样？”。看看会发生什么。*  
+*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！  
+我们对它说“北京的天气怎么样？”。看看会发生什么。*  
 
 - **OnAIResponseListener  AI语义结果回调**  
 ```Java
@@ -131,18 +132,103 @@ outputContext | 当前语义上下文
 
 *拿到了结果，我们去播放。*  
 
-*当然我们也可以让它给我们播放一首音乐，比如“给我播放东风破！”。*
+*当然我们也可以让它给我们播放一首音乐，比如“我要听东风破！”。*
 
 *接口返回*
 
 ```Json
-
+{
+	"apiVersion": "1.0",
+	"status": {
+		"code": 0,
+		"errorType": "success"
+	},
+	"asr": {
+		"text": "我要听东风破。"
+	},
+	"tts": {
+		"content": "http://ros.roobo.net/voice/static/usertts/2018-09-15/962/reply.15931625739899993222.2014ac12-6339-4490-9fd1-078ca58f92c2.mp3",
+		"music": "",
+		"text": "为您播放 周杰伦 东风破",
+		"format": "mp3",
+		"cookie": ""
+	},
+	"ai": {
+		"status": {
+			"code": 0,
+			"errorType": "success"
+		},
+		"query": "我要听东风破",
+		"semantic": {
+			"service": "Media",
+			"action": "Play",
+			"outputContext": {
+				"context": "media,ack",
+				"service": "RMUSIC_1206"
+			}
+		},
+		"result": {
+			"hint": "为您播放 周杰伦 东风破",
+			"data": {
+				"album": "叶惠美",
+				"artist": "周杰伦",
+				"audio": "http://ms-dwn.roo.bo/resource/music_bk/775/30097775.mp3",
+				"extra": null,
+				"hqAudio": "",
+				"hqImage": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+				"image": "http://y.gtimg.cn/music/photo_new/T002R300x300M000000MkMni19ClKG.jpg",
+				"length": 315,
+				"name": "东风破",
+				"playMode": "",
+				"resId": "music:4041702",
+				"sid": "3007738066-1537012676417",
+				"size": 5050583,
+				"start": 0,
+				"type": "MUSIC"
+			}
+		}
+	}
+}
 ```
 
 *如果不想听音乐，对他说“关闭”。*
 *接口返回*
 ```Json
-
+{
+	"apiVersion": "1.0",
+	"status": {
+		"code": 0,
+		"errorType": "success"
+	},
+	"asr": {
+		"text": "关闭。"
+	},
+	"tts": {
+		"content": "",
+		"music": "",
+		"format": "",
+		"cookie": ""
+	},
+	"ai": {
+		"status": {
+			"code": 0,
+			"errorType": "success"
+		},
+		"query": "关闭",
+		"semantic": {
+			"service": "Media",
+			"action": "Exit",
+			"inputContext": {
+				"context": "media,ack",
+				"service": "RMUSIC_1206"
+			},
+			"outputContext": {
+				"context": "",
+				"service": "RMUSIC_1206"
+			}
+		}
+	}
+}
 ```
 
 *解析 "service": "","action": "" 得到action做相应得处理*
