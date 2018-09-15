@@ -100,8 +100,6 @@ AI 结果解析
 }
 ```
 
-*是不是有点头大，没关系我们看下协议概览。更多更详细协议概览[传送门](https://github.com/271766152/docs/blob/master/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#33-semantic%E5%AE%9A%E4%B9%89)。* 
-
 - **协议概览**  
 
 Name | Description	
@@ -111,6 +109,16 @@ status | 本次请求是否成功
 asr | 语音识别结果
 tts | tts相关内容 
 ai | AI请求相关 
+
+-**AI部分概览**  
+
+Name | Description	
+------------ | ------------ 
+status | 本次AI请求是否成功  
+query | 纠正后的Text  
+semantic | 语义部分  
+result | 返回的结果部分 
+
 
 *拿到了结果，我们去播放。*  
 
