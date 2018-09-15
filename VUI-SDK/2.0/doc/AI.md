@@ -21,9 +21,75 @@ AI 解析
 ```
 *我们来看下接口返回*
 
-
-
-
+```Json
+{
+	"apiVersion": "1.0",
+	"status": {
+		"code": 0,
+		"errorType": "success"
+	},
+	"asr": {
+		"text": "北京的天气怎么样？"
+	},
+	"tts": {
+		"content": "http://ros.roobo.net/voice/static/usertts/2018-09-15/662/reply.18446744073170258879.e0dad16f-3415-4db2-875b-cf695b1123c1.mp3",
+		"music": "",
+		"text": "北京今天多云，气温15度到26度，东北风3级",
+		"format": "mp3",
+		"cookie": ""
+	},
+	"ai": {
+		"status": {
+			"code": 0,
+			"errorType": "success"
+		},
+		"query": "北京的天气怎么样",
+		"semantic": {
+			"service": "Weather",
+			"action": "WeatherForADay",
+			"params": {
+				"city": {
+					"orgin": "北京",
+					"norm": "北京",
+					"code": 0
+				},
+				"focus": {
+					"orgin": "天气怎么样",
+					"norm": "天气",
+					"code": 0
+				}
+			},
+			"outputContext": {
+				"context": "oneDay",
+				"service": "Weather"
+			}
+		},
+		"result": {
+			"hint": "北京今天多云，气温15度到26度，东北风3级",
+			"data": [{
+				"alter": "",
+				"city": "北京",
+				"date": "2018-09-15",
+				"focus": "weather",
+				"humidity": "31",
+				"index": 1,
+				"maxTemp": "26",
+				"minTemp": "15",
+				"pm25": "17",
+				"quality": "优",
+				"temperature": "25",
+				"weather": "多云",
+				"windDay": "东北",
+				"windDayLevel": "3",
+				"windDir": "东北",
+				"windLevel": "3",
+				"windNight": "东北",
+				"windNightLevel": "3"
+			}]
+		}
+	}
+}
+```
 
 *是不是有点头大，没关系我们看下协议概览。更多更详细协议概览请[点击](https://github.com/271766152/docs/blob/master/Bot/3-ApiReference/rosai-client-development-protocol-intent.md#33-semantic%E5%AE%9A%E4%B9%89)。* 
 
