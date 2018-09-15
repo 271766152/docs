@@ -124,7 +124,6 @@ InitListener  初始化回调**
         public void onASRResult(ASRResult result) {
             //如果是需要带AI的结果，此回调结果可以不做处理；
             Log.d(TAG, "ASRResult " + (result.getResultType() == ASRResult.TYPE_OFFLINE ? "offline " : " online ") + " text " + result.getResultText());
-//                handler.obtainMessage(MSG_SHOW_RESULT, result.getResultText()).sendToTarget();
         }
 
         @Override
