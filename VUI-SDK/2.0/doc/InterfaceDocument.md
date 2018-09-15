@@ -15,7 +15,7 @@
     [3.3　AI语义解析上下文](#3.3)  
     [3.4　设置AI语义解析的语言](#3.4)   
     [3.5　设置AI语义解析地理位置上报接口](#3.5)  
-    [四.语音播报](#4)  
+    [四.语音合成](#4)  
     [4.1　开始使用TTS](#4.1)  
     [4.2　停止使用TTS](#4.2)  
     [4.3　TTS监听器](#4.3)   
@@ -50,12 +50,12 @@ VUIApi.getInstance().init(context, initParam,initListener);
 
 参数 | 说明 | 必填  
 ------------ | ------------ | ------------ 
-setLanguage() | 设置ASR/TTS/AI的语言 | 是
+setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景;如果用户的SN号是预分配的模式,就必须调用此接口设置SN号 | 是
 setVUIType | 设置VUI交互方式 | 是
 setTTSType | 设置TTS在线/离线模式 |是
 setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")
 setAudioGenerator() | 设置语音识别的音源,设置为RooboAECRecorder,是带AEC功能 |是
-setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景;如果用户的SN号是预分配的模式,就必须调用此接口设置SN号 | 否 
+setLanguage() | 设置ASR/TTS/AI的语言 | 否
 setTokenType() | 设置token的类型,默认是内部维护token,如果是外部设置token，同时需要设置setDeviceInfo()的信息 | 否 
 setDeviceInfo() | 设置SN号和token,同时需要设置setTokenType(VUIApi.TokenType.TYPE_TOKEN_EXTERNAL_SETTING) | 否 
  
@@ -178,7 +178,7 @@ VUIApi.getInstance().reportLocationInfo(List<ScanResult> scanResultList);
 VUIApi.getInstance().reportLocationInfo(String latitude, String longitude, String country, String province, String city, String detail);
 ```
   
-<h2 id="4"> 四.语音播报</h2>
+<h2 id="4"> 四.语音合成</h2>
     
 <h3 id="4.1"> 1.开始使用TTS</h3>
 
