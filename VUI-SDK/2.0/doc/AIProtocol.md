@@ -10,22 +10,25 @@ AI Protocol
     OnAIResponseListener aiResponseListener = new OnAIResponseListener() {
         @Override
         public void onResult(final String json) {
-            Log.d(TAG, "onAIResponse: " + json);
+            Log.e(TAG, "ai json: " + json);
+            if (AIResultParser.isStartPlayer(json)) {
+                String url = AIResultParser.parserMP3UrlFromAIResultJSON(json);
+                if (!TextUtils.isEmpty(url)) {
+                    MediaPlayerUtil.playByUrl(url);
+                }
+            } else if (AIResultParser.isExitPlayer(json)) {
+                MediaPlayerUtil.stop();
+            }
 
-            String hint = AIResultParser.parserAudioUrlFromAIResultJSON(json);
+            String hint = AIResultParser.parserHintFromAIResultJSON(json);
             if (!TextUtils.isEmpty(hint)) {
-                handler.obtainMessage(MSG_SHOW_RESULT, json).sendToTarget();
-                Message message = new Message();
-                message.obj = hint;
-                message.what = MSG_TTS_PLAYER;
-                handler.sendMessageDelayed(message, 1000);
+                handler.obtainMessage(MSG_TTS_PLAYER, hint).sendToTarget();
             }
         }
 
         @Override
-        public void onFail(final RError rError) {
-            handler.obtainMessage(MSG_SHOW_RESULT,
-                    "AI error " + rError.getFailCode() + " " + rError.getFailDetail()).sendToTarget();
+        public void onFail(RError message) {
+            Log.e(TAG, "ai fail: " + message.getFailDetail());
         }
     };
 ```
@@ -230,7 +233,8 @@ outputContext | 当前语义上下文
 
 *解析 "service": "","action": "" 得到action做相应得处理*
 ```Java
-if (!TextUtils.isEmpty(resultJson)) {
+  public static boolean isStartPlayer(String resultJson) {
+        if (!TextUtils.isEmpty(resultJson)) {
             try {
                 JSONObject jsonObject = new JSONObject(resultJson);
                 JSONObject aiJsonObject = jsonObject.optJSONObject("ai");
@@ -239,7 +243,7 @@ if (!TextUtils.isEmpty(resultJson)) {
                     if (semanticJsonObject != null) {
                         if ("Media".equals(semanticJsonObject.optString("service")) &&
                                 "Play".equals(semanticJsonObject.optString("action"))) {
-				
+                            return true;
                         }
                     }
                 }
@@ -247,9 +251,12 @@ if (!TextUtils.isEmpty(resultJson)) {
                 Log.e(TAG, "parser error!");
             }
         }
-
-
-if (!TextUtils.isEmpty(resultJson)) {
+        return false;
+    }
+```
+```Java
+    public static boolean isExitPlayer(String resultJson) {
+        if (!TextUtils.isEmpty(resultJson)) {
             try {
                 JSONObject jsonObject = new JSONObject(resultJson);
                 JSONObject aiJsonObject = jsonObject.optJSONObject("ai");
@@ -258,7 +265,7 @@ if (!TextUtils.isEmpty(resultJson)) {
                     if (semanticJsonObject != null) {
                         if ("Media".equals(semanticJsonObject.optString("service")) &&
                                 "Exit".equals(semanticJsonObject.optString("action"))) {
-				
+                            return true;
                         }
                     }
                 }
@@ -266,6 +273,8 @@ if (!TextUtils.isEmpty(resultJson)) {
                 Log.e(TAG, "parser error!");
             }
         }
+        return false;
+    }
 ```
 
 
