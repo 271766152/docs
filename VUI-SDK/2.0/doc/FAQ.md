@@ -3,11 +3,12 @@ FAQ
 *我们会不定期更新FAQ列表，如果这没能解决您的问题，也请将您的问题整理好后发给我们，向我们咨询。*
 
 - *如果我想设置不同发音的speaker，我该怎么办？*  
-1. 修改在线发音人(参考附录中在线发音人范围)  
+
+**1. 修改在线发音人(参考附录中在线发音人范围)**  
 ```Java
-        VUIApi.getInstance().setSpeaker("jpn-JPN");
+    VUIApi.getInstance().setSpeaker("jpn-JPN");
 ```  
-2. 修改离线发音人(参考附录中离线发音人范围)  
+**2. 修改离线发音人(参考附录中离线发音人范围)**  
   - 1. 在assets/vexpressive/config.xml中添加发音人的配置
   ```Java
       <speakers>
