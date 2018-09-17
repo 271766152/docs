@@ -1,5 +1,5 @@
 
-VUISDK_V1.0 简介
+VUISDK_V2.0 简介
 =
 
 **VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的一款包含基础语音能力和语音交互范式的软件开发包。VUI SDK连接roobo的语音语义服务平台，结合离线能力，给客户提供完整的语音系统开发能力支持。 
@@ -20,3 +20,5 @@ VUISDK_V1.0 简介
 
 项目工作原理
 =
+
+![image.png](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/%E6%B5%81%E7%A8%8B%E5%9B%BE.png)
