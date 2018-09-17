@@ -4,8 +4,7 @@ FAQ
 
 *问：在线识别，支持哪些语言？*  
 **答：在线识别支持多种语言设置，具体请看[附录](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/Appendix.md)介绍。**
-
-*问：语音点播歌曲的时候，如何不播放提示音？*  
+ 
 *问：如何进行一键中译英、一键英译中?*  
 **答：在开始识别之前，需要调用setAiContext(String context)接口进行翻译场景的设置，并且还需要调用setCloudRecognizeLang(String lang)接口设置想要翻译的原语音类型。具体代码如下：**
 ```Java
@@ -19,6 +18,7 @@ FAQ
         VUIApi.getInstance().startRecognize();
 ```
 *问：返回Denny Access的错误提示?*  
+**账号问题。**  
 *问：如何选择在线TTS还是离线TTS?*  
 *问：如何选择TTS的声音?*  
 **答：修改发音人分为在线发音人和离线发音人。**  
