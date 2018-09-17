@@ -10,6 +10,17 @@ FAQ
 
 - *语音点播歌曲的时候，如何不播放提示音？*  
 - *如何进行一键中译英、一键英译中?*  
+**在开始识别之前，需要调用setAiContext(String context)接口进行翻译场景的设置，并且还需要调用setCloudRecognizeLang(String lang)接口设置想要翻译的原语音类型。具体代码如下：**
+```Java
+        //设置翻译场景
+        VUIApi.getInstance().setAIContext("[{"context":"inquiry", "service":"Translator" }]");
+        //中译英
+        //VUIApi.getInstance().setCloudRecognizeLang("cmn-CHN");
+        //英译中
+        //VUIApi.getInstance().setCloudRecognizeLang("eng-USA");
+        //开始识别
+        VUIApi.getInstance().startRecognize();
+```
 - *返回Denny Access的错误提示?*  
 - *如何选择在线TTS还是离线TTS?*  
 - *如何选择TTS的声音?*  
