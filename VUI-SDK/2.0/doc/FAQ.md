@@ -21,7 +21,7 @@ FAQ
 **答：sn号错误，请联系roobo工作人员。**  
 
 *问：如何选择在线TTS还是离线TTS?*  
-**答：**
+**答：请使用setTTSType(RTTSPlayer.TTSType.TYPE_ONLINE)来设置语音合成方式,默认是离线。**
 
 *问：如何选择TTS的声音?*  
 **答：目前只支持修改在线发音人，具体请联系roobo工作人员。**  
