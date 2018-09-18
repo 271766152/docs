@@ -14,7 +14,13 @@
 - *[WAKEUP]:为您提供语音唤醒设备的能力，默认唤醒词为“智能管家”。*  
 - *[VAD]:为您提供语音端点检测的能力，检测语音的开始和结束。*  
 - *[ASR]:为您提供语音识别的能力，支持在线和离线。为您返回语音识别的结果和语义结果。*  
-- *[TTS]:为您提供文本转语音的能力，支持在线和离线。*  
+- *[TTS]:为您提供文本转语音的能力，支持在线和离线。*   
+
+
+<center>
+<img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo1.png" width="30%" height="30%" />
+</center>
+
 
 **现在以模式二 VAD+ASR+TTS 为例开始我们的Demo。  
 目前SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-xx-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加。**
@@ -30,7 +36,6 @@
 ```
 
 - **我们需要你创建一个带有按钮的页面，就像这样**  
-注：deveceID需要您来告诉我。可以查看如何[申请SN号](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%96%B9%E6%B3%95.md)。在获取了SN之后，记得在initVUIParam()方法中设置。由于本段代码是摘录自demo，deviceID是由前一个Activity传递而来。如果想直接运行Demo，请将SN设置在DemoActivity中的getDeviceID方法中返回。  
 
 <center>
 <img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo2.png" width="30%" height="30%" />
@@ -48,6 +53,9 @@
         initVUIParam(getIntent().getStringExtra(DemoMainActivity.DEVICE_ID));
     }
 ``` 
+
+- **注：deveceID需要您来告诉我。可以查看如何[申请SN号](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%96%B9%E6%B3%95.md)。在获取了SN之后，会在initVUIParam()方法中设置。由于本段代码是摘录自demo，deviceID是由前一个Activity传递而来。如果想直接运行Demo，请将SN设置在DemoActivity中的getDeviceID方法中返回。  **
+
 
 - **接下来**  
 ```Java
