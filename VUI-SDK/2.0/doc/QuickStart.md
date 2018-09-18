@@ -34,7 +34,6 @@
 
 <center>
 <img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo2.png" width="30%" height="30%" />
-页面
 </center>
 
 
