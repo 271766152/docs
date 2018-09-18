@@ -147,10 +147,9 @@ VUIApi.getInstance().setCloudRecognizeLang(String lang);
 
 ```Java
  /**
-     * List<ScanResult> scanResultList = 
-     * 									getApplication()
-     * 									.getApplicationContext()
-     * 									.getSystemService(Context.WIFI_SERVICE).getScanResults();
+     * List<ScanResult> scanResultList = getApplication()
+     * 					.getApplicationContext()
+     * 					.getSystemService(Context.WIFI_SERVICE).getScanResults();
      */
      
 VUIApi.getInstance().reportLocationInfo(List<ScanResult> scanResultList);
