@@ -50,7 +50,7 @@ VUIApi.getInstance().init(context, initParam,initListener);
 
 参数 | 说明 | 必填  
 ------------ | ------------ | ------------ 
-setUserInfo() | 通常不会调用此方法，仅用于给客户预分配SN和PublicKey的场景;如果用户的SN号是预分配的模式,就必须调用此接口设置SN号 | 是
+setUserInfo() | deviceID信息必须设置，根据项目的SN分配方式 ：【预分配并生产线烧录方式】就设置分配的SN号；【通过唯一字符串在线注册方式】就设置设备的唯一标识 | 是
 setVUIType | 设置VUI交互方式 | 是
 setTTSType | 设置TTS在线/离线模式 |是
 setTTSSpeaker | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")
