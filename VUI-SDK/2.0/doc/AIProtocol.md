@@ -131,7 +131,7 @@ service |  场景名称
 action |   动作名称
 outputContext | 当前语义上下文 
 
-*注：更多支持的场景请参考[附录]()。
+*注：更多支持的场景请参考[附录](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/Appendix.md)。
 
 
 *当然我们也可以让它给我们播放一首音乐，比如“我要听东风破！”。*
