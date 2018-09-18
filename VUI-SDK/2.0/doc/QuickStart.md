@@ -9,18 +9,16 @@
 - *模式三：ASR + TTS*  
 
 
+<center>
+<img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo1.png" width="30%" height="30%" />
+</center>
+
 **功能介绍**  
 
 - *[WAKEUP]:为您提供语音唤醒设备的能力，默认唤醒词为“智能管家”。*  
 - *[VAD]:为您提供语音端点检测的能力，检测语音的开始和结束。*  
 - *[ASR]:为您提供语音识别的能力，支持在线和离线。为您返回语音识别的结果和语义结果。*  
 - *[TTS]:为您提供文本转语音的能力，支持在线和离线。*   
-
-
-<center>
-<img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo1.png" width="30%" height="30%" />
-</center>
-
 
 **现在以模式二 VAD+ASR+TTS 为例开始我们的Demo。  
 目前SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-xx-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加。**
