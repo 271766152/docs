@@ -5,16 +5,15 @@ VUISDK_V2.0 简介
 **VUI SDK是roobo结合自身机器人和语音对话系统开发经验推出的一款包含基础语音能力和语音交互范式的软件开发包。VUI SDK连接roobo的语音语义服务平台，给客户提供完整的语音系统开发能力支持。 
 VUI SDK为客户提供了：**
   
--  离线语音识别和在线语音识别的能力。  
--  语音端点检测,语音边界检测的能力。  
--  离线TTS和在线TTS的能力。  
 -  AEC前端信号处理。  
+-  语音端点检测,语音边界检测的能力。  
+-  离线语音识别和在线语音识别的能力。  
+-  离线TTS和在线TTS的能力。  
 -  丰富的语义和内容服务。  
-
 
 SDK使用条件
 =
 
 -  联系商务申请ROSAI帐号并创建应用。关于账号的详细说明请[点击](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%96%B9%E6%B3%95.md)。    
--  提供应用的的AgentId给商务，获取[SDK]()和[Demo](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/Demo.md)。  
+-  提供应用的AgentId给商务，获取[Demo]()。  
 
