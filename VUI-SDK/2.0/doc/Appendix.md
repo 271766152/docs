@@ -72,176 +72,44 @@
 23301 | 在上传wifi列表获取位置时 服务端返回的http | body大小超出了8K的限制
 23401 | 在上传wifi列表获取位置时 在构造请求时，由于内存不足申请内存失败
 
-<h3 id="4">2.在线识别支持的语言列表</h3>
-
-| 语言| 语言对应的code |
-| ------------- |:-------------:|
-|	Arabic (Egypt)	|	ara-EGY	|
-|	Arabic (Saudi Arabia)	|	ara-SAU	|
-|	Arabic (International)	|	ara-XWW	|
-|	Bahasa (Indonesia)	|	ind-IDN	|
-|	Cantonese (Traditional)	|	yue-CHN	|
-|	Catalan	|	cat-ESP	|
-|	Croatian 	|	hrv-HRV	|
-|	Czech	|	ces-CZE	|
-|	Danish	|	dan-DNK	|
-|	Dutch	|	nld-NLD	|
-|	English (Australia)*	|	eng-AUS	|
-|	English (GB)*	|	eng-GBR	|
-|	English (US)*	|	eng-USA	|
-|	English (India) 	|	eng-IND	|
-|	Finnish	|	fin-FIN	|
-|	French (Canada)	|	fra-CAN	|
-|	French (France)*	|	fra-FRA	|
-|	German*	|	deu-DEU	|
-|	Greek	|	ell-GRC	|
-|	Hebrew	|	heb-ISR	|
-|	Hindi	|	hin-IND	|
-|	Hungarian	|	hun-HUN	|
-|	Italian	|	ita-ITA	|
-|	Japanese	|	jpn-JPN	|
-|	Korean	|	kor-KOR	|
-|	Malay	|	zlm-MYS	|
-|	Mandarin (China/Simplified)	|	cmn-CHN	|
-|	Mandarin (Taiwan/Traditional)	|	cmn-TWN	|
-|	Norwegian	|	nor-NOR	|
-|	Polish	|	pol-POL	|
-|	Portuguese (Brazil)	|	por-BRA	|
-|	Portuguese (Portugal)	|	por-PRT	|
-|	Romanian	|	ron-ROU	|
-|	Russian	|	rus-RUS	|
-|	Slovak	|	slk-SVK	|
-|	Spanish (Spain)	|	spa-ESP	|
-|	Spanish (LatAm)	|	spa-XLA	|
-|	Swedish	|	swe-SWE	|
-|	Thai	|	tha-THA	|
-|	Turkish	|	tur-TUR	|
-|	Ukrainian	|	ukr-UKR	|
-|	Vietnamese	|	vie-VNM	|
-
-<h3 id="5">3.离线识别支持的语言列表</h3>
-
-| 语言| 语言对应的code |
-| ------------- |:-------------:|
-|	US English	|	eng-USA	|
-|	Spanish(LatAM)	|	spa-XLA	|
-|	Russian	|	rus-RUS	|
-|	Spanish(Spain)	|	spa-ESP	|
-|	French for France	|	fra-FRA	|
-|	German	|	deu-DEU	|
-|	Danish	|	dan-DNK	|
-|	Italian	|	ita-ITA	|
-|	Dutch	|	nld-NLD	|
-|	Mandarin	|	cmn-CHN	|
-|	Cantonese Traditional	|	yue-CHN	|
-|	Korean	|	kor-KOR	|
-|	Japanese	|	jpn-JPN	|
-|	arabic	|	ara-XWW	|
-|	Polish	|	pol-POL	|
-|	turkish	|	tur-TUR	|
-
-<h3 id="6">4.在线发音人列表</h3>
-
-| 语言| 语言对应的code |
-| ------------- |:-------------:|
-|	Arabic (Egypt)	|	ara-EGY	|
-|	Arabic (Saudi Arabia)	|	ara-SAU	|
-|	Arabic (International)	|	ara-XWW	|
-|	Bahasa (Indonesia)	|	ind-IDN	|
-|	Cantonese (Simplified)	|	yue-CHN	|
-|	Catalan	|	cat-ESP	|
-|	Croatian 	|	hrv-HRV	|
-|	Czech	|	ces-CZE	|
-|	Danish	|	dan-DNK	|
-|	Dutch	|	nld-NLD	|
-|	English (Australia)*	|	eng-AUS	|
-|	English (GB)*	|	eng-GBR	|
-|	English (US)*	|	eng-USA	|
-|	English (India) 	|	eng-IND	|
-|	Finnish	|	fin-FIN	|
-|	French (Canada)	|	fra-CAN	|
-|	French (France)*	|	fra-FRA	|
-|	German*	|	deu-DEU	|
-|	Greek	|	ell-GRC	|
-|	Hebrew	|	heb-ISR	|
-|	Hindi	|	hin-IND	|
-|	Hungarian	|	hun-HUN	|
-|	Italian	|	ita-ITA	|
-|	Japanese	|	jpn-JPN	|
-|	Korean	|	kor-KOR	|
-|	Malay	|	zlm-MYS	|
-|	Mandarin (China/Simplified)	|	cmn-CHN	|
-|	Mandarin (Taiwan/Traditional)	|	cmn-TWN	|
-|	Norwegian	|	nor-NOR	|
-|	Polish	|	pol-POL	|
-|	Portuguese (Brazil)	|	por-BRA	|
-|	Portuguese (Portugal)	|	por-PRT	|
-|	Romanian	|	ron-ROU	|
-|	Russian	|	rus-RUS	|
-|	Slovak	|	slk-SVK	|
-|	Spanish (Spain)	|	spa-ESP	|
-|	Spanish (LatAm)	|	spa-XLA	|
-|	Swedish	|	swe-SWE	|
-|	Thai	|	tha-THA	|
-|	Turkish	|	tur-TUR	|
-|	Ukrainian	|	ukr-UKR	|
-
-
-<h3 id="7">5.离线发音人列表</h3>
-
-| 语言 | 语言对应的code | 发音人 |
-| ------------- |:-------------|:-------------:|
-|	Arabic	|	ara-XWW	|	Laila	|
-|	Bahasa (Indonesia)	|	ind-IDN	|	Damayanti	|
-|	Basque	|	baq-ESP	|	Miren	|
-|	Cantonese	|	yue-CHN	|	Sin-Ji	|
-|	Catalan	|	cat-ESP	|	Jordi	|
-|	Czech	|	ces-CZE	|	Iveta	|
-|	Danish	|	dan-DNK	|	Magnus	|
-|	Dutch	|	nld-NLD	|	Claire	|
-|	Dutch (Belgium)	|	nld-BEL	|	Ellen	|
-|	English (Australia)	|	eng-AUS	|	Karen	|
-|	English (GB)	|	eng-GBR	|	Daniel	|
-|	English (India)	|	eng-IND	|	Veena	|
-|	English (Ireland)	|	eng-IRL	|	Moira	|
-|	English (Scotland)	|	eng-SCT	|	Fiona	|
-|	English (South Africa)	|	eng-ZAF	|	Tessa	|
-|	English (US)	|	eng-USA	|	Allison	|
-|	Finnish	|	fin-FIN	|	Satu	|
-|	French	|	fra-FRA	|	Aurelie	|
-|	French (Canada)	|	fra-CAN	|	Amelie	|
-|	Galician	|	glg-ESP	|	Carmela	|
-|	German	|	deu-DEU	|	Markus	|
-|	Greek	|	ell-GRC	|	Melina	|
-|	Hebrew	|	heb-ISR	|	Carmit	|
-|	Hindi	|	hin-IND	|	Lekha	|
-|	Hungarian	|	hun-HUN	|	Mariska	|
-|	Italian	|	ita-ITA	|	Alice	|
-|	Japanese	|	jpn-JPN	|	Ichiro	|
-|	Korean	|	kor-KOR	|	Sora	|
-|	Mandarin (China)	|	cmn-CHN	|	Li-Li	|
-|	Mandarin (Taiwan)	|	cmn-TWN	|	Mei-Jia	|
-|	Norwegian	|	nor-NOR	|	Nora	|
-|	Polish	|	pol-POL	|	Zosia	|
-|	Portuguese (Brazil)	|	por-BRA	|	Luciana	|
-|	Portuguese (Portugal)	|	por-PRT	|	Joana	|
-|	Romanian	|	ron-ROU	|	Ioana	|
-|	Russian	|	rus-RUS	|	Katya	|
-|	Slovak	|	slk-SVK	|	Laura	|
-|	Spanish (Castilian)	|	spa-ESP	|	Jorge	|
-|	Spanish (Columbia)	|	spa-COL	|	Soledad	|
-|	Swedish	|	swe-SWE	|	Alva	|
-|	Thai	|	tha-THA	|	Kanya	|
-|	Turkish	|	tur-TUR	|	Cem	|
-|	Valencian	|	spa-ESP	|	Empar	|
-| Malay | zlm-MYS	 | Amira |
-
-
-
-<h3 id="8">6.在线AI支持的语言列表</h3>
+<h3 id="8">2.在线AI支持的语言列表</h3>
 
 | 语言码| 备注 |
 | ------------- |:-------------:|
 |	US English	|	eng-USA	|
 |	Mandarin	|	cmn-CHN	|
 
+<h3 id="4">3.AI场景服务对应表</h3>
+
+|	场景	|	Service内容	|
+| ------------- |:-------------:|
+|	新闻	|	News	|
+|	天气	|	Flight	|
+|	星座	|	Star	|
+|	股票	|	Stock	|
+|	导航	|	Navigation	|
+|	闹钟	|	Clock	|
+|	计算器	|	Calculator	|
+|	货币查询	|	Currency	|
+|	定时关机	|	ShutDown	|
+|	翻译	|	Translator	|
+|	单位换算	|	UnitConversion	|
+|	儿歌	|	ChildrenSong	|
+|	笑话	|	Joke	|
+|	音乐	|	Music	|
+|	小众音频	|	NicheAudio	|
+|	电台	|	Radio	|
+|	故事	|	Story	|
+|	音效	|	SoundEffects	|
+|	菜谱	|	Cook	|
+|	节假日查询	|	holiday	|
+|	十万个为什么	|	Whys	|
+|	成语接龙	|	Idiom	|
+|	诗词	|	Poetry	|
+|	聊天	|	Chat	|
+|	百科	|	Baike	|
+|	系统画像	|	Portray	|
+|	时间	|	TimeDates	|
+|	实时英译汉	|	EnToZhTranslator	|
+|	影讯查询	|	LatestMovieSearcher	|
+|	机票预订	|	InquiryAirTickets	|
