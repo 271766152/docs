@@ -87,7 +87,7 @@ VUIApi.getInstance().setASRListener(RASRListener listener)
 RASRListener asrListener = new RASRListener() {
         @Override
         public void onASRResult(ASRResult result) {
-        		result.getResultText();//通过该方法获取识别出的文本
+            result.getResultText();//通过该方法获取识别出的文本
         }
 
         @Override
