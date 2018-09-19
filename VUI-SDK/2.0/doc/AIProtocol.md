@@ -109,7 +109,7 @@ AI Protocol
 Name | Description	
 ------------ | ------------ 
 apiVersion | sdk version 
-status | 本次请求是否成功
+status | 本次请求是否成功 0表示成功 非0表示失败
 asr | 语音识别结果
 tts | tts相关内容 
 ai | AI请求相关 
@@ -118,7 +118,7 @@ ai | AI请求相关
 
 Name | Description	
 ------------ | ------------ 
-status | 本次AI请求是否成功  
+status | 本次AI请求是否成功 0表示成功 非0表示失败  
 query | 纠正后的Text  
 semantic | 语义部分  
 result | 返回的结果部分 
