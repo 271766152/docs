@@ -87,12 +87,10 @@
 |	天气	|	Flight	|
 |	星座	|	Star	|
 |	股票	|	Stock	|
-|	导航	|	Navigation	|
 |	闹钟	|	Clock	|
 |	计算器	|	Calculator	|
-|	货币查询	|	Currency	|
-|	定时关机	|	ShutDown	|
-|	翻译	|	Translator	|
+|	货币汇率查询及计算	|	Currency	|
+|	翻译（英译中）	|	Translator	|
 |	单位换算	|	UnitConversion	|
 |	儿歌	|	ChildrenSong	|
 |	笑话	|	Joke	|
@@ -112,4 +110,6 @@
 |	时间	|	TimeDates	|
 |	实时英译汉	|	EnToZhTranslator	|
 |	影讯查询	|	LatestMovieSearcher	|
-|	机票预订	|	InquiryAirTickets	|
+|	教材场景	|	TextBook	|
+|	用户画像	|	UserProfile	|
+|	外语对话练习(口语对练）	|	OralExercise	|
