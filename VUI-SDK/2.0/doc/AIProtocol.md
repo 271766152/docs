@@ -131,9 +131,9 @@ outputContext | 当前语义上下文
 *注：更多支持的场景请参考[附录](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/Appendix.md)。
 
 
-*当然我们也可以让它给我们播放一首音乐，比如“我要听东风破！”。*
+*当然我们也可以让它给我们播放一首音乐，比如“我要听东风破！”。*  
 
-*接口返回*
+接口返回
 
 ```Json
 {
@@ -190,8 +190,9 @@ outputContext | 当前语义上下文
 }
 ```
 
-*如果不想听音乐，对他说“关闭”。*
-*接口返回*
+*如果不想听音乐，对他说“关闭”。*  
+
+接口返回
 ```Json
 {
 	"apiVersion": "1.0",
@@ -230,7 +231,7 @@ outputContext | 当前语义上下文
 }
 ```
 
-*解析 "service": "","action": "" 得到action做相应得处理*
+解析 "service": "","action": "" 得到action做相应得处理
 ```Java
   public static boolean isStartPlayer(String resultJson) {
         if (!TextUtils.isEmpty(resultJson)) {
@@ -277,7 +278,7 @@ outputContext | 当前语义上下文
 ```
 
 
-*MediaPlayer 去播放音乐*  
+MediaPlayer 去播放音乐  
 ```Java
  public static void playByUrl(String url) {
         if (!TextUtils.isEmpty(url)) {
