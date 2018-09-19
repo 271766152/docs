@@ -5,20 +5,20 @@
     [1.2　InitParam 构造方法](#1.2)  
     [1.3　InitParam 参数列表](#1.3)  
     [二.语音识别](#2)  
-    [2.1　开始语音识别](#2.1)  
-    [2.2　停止语音识别](#2.2)  
-    [2.3　取消语音识别](#2.3)   
-    [2.4　语音识别监听器](#2.4)   
+    [2.1　语音识别监听器](#2.1)   
+    [2.2　开始语音识别](#2.2)  
+    [2.3　停止语音识别](#2.3)  
+    [2.4　取消语音识别](#2.4)    
     [三.语义解析](#3)  
-    [3.1　AI语义解析](#3.1)  
-    [3.2　AI语义解析监听器](#3.2)  
+    [3.1　AI语义解析监听器](#3.1)  
+    [3.2　AI语义解析](#3.2)  
     [3.3　AI语义解析上下文](#3.3)  
     [3.4　设置AI语义解析的语言](#3.4)   
     [3.5　上报设备地理位置信息](#3.5)  
     [四.语音合成](#4)  
-    [4.1　开始使用TTS](#4.1)  
-    [4.2　停止使用TTS](#4.2)  
-    [4.3　TTS监听器](#4.3)   
+    [4.1　TTS监听器](#4.1)  
+    [4.2　开始使用TTS](#4.2)  
+    [4.3　停止使用TTS](#4.3)   
     [4.4　设置Speaker](#4.4)   
     [4.5　获取TTS音频数据](#4.5)   
     [五.其他](#5)  
@@ -61,27 +61,7 @@ setDeviceInfo(DeviceInfo deviceInfo) | 设置SN号和token,同时需要设置set
  
 <h2 id="2">二.语音识别</h2>   
     
-<h3 id="2.1">1.开始语音识别</h3>
-
-```Java
-VUIApi.getInstance().startRecognize();
-```
-
-<h3 id="2.2"> 2.停止语音识别</h3>
-
-```Java
-VUIApi.getInstance().stopRecognize();
-//调用该方法后,可在RASRListener中得到处理结果
-```
-
-<h3 id="2.3"> 3.取消语音识别</h3>
-
-```Java
-VUIApi.getInstance().cancelRecognize();
-//调用该方法后,无结果返回
-```
-
-<h3 id="2.4"> 4.语音识别监听器</h3>
+<h3 id="2.1"> 1.语音识别监听器</h3>
 
 ```Java
 //语音识别监听器
@@ -107,15 +87,30 @@ RASRListener asrListener = new RASRListener() {
 //设置语音识别监听器
 VUIApi.getInstance().setASRListener(asrListener)    
 ```
-  
-<h2 id="3"> 三.语义解析</h2>
-<h3 id="3.1"> 1.AI语义解析</h3>
+    
+<h3 id="2.2">2.开始语音识别</h3>
 
 ```Java
-VUIApi.getInstance().aiQuery(String text);//text为需要进行AI语义解析的文本
+VUIApi.getInstance().startRecognize();
 ```
 
-<h3 id="3.2"> 2.AI语义解析监听器</h3>
+<h3 id="2.3"> 3.停止语音识别</h3>
+
+```Java
+VUIApi.getInstance().stopRecognize();
+//调用该方法后,可在RASRListener中得到处理结果
+```
+
+<h3 id="2.4"> 4.取消语音识别</h3>
+
+```Java
+VUIApi.getInstance().cancelRecognize();
+//调用该方法后,无结果返回
+```
+  
+<h2 id="3"> 三.语义解析</h2>
+
+<h3 id="3.1"> 1.AI语义解析监听器</h3>
 
 ```Java
  OnAIResponseListener aiResponseListener = new OnAIResponseListener() {
@@ -131,6 +126,12 @@ VUIApi.getInstance().aiQuery(String text);//text为需要进行AI语义解析的
     
  VUIApi.getInstance().setOnAIResponseListener(aiResponseListener)
  //设置AI语义解析监听器
+```
+
+<h3 id="3.2"> 2.AI语义解析</h3>
+
+```Java
+VUIApi.getInstance().aiQuery(String text);//text为需要进行AI语义解析的文本
 ```
   
 <h3 id="3.3"> 3.AI语义解析上下文</h3>
@@ -187,22 +188,7 @@ VUIApi.getInstance().reportLocationInfo(String latitude, String longitude, Strin
   
 <h2 id="4"> 四.语音合成</h2>
     
-<h3 id="4.1"> 1.开始使用TTS</h3>
-
-```Java
-VUIApi.getInstance().speak(String text);//text为需要进行语音播报的文本
-
-VUIApi.getInstance().speak(String text, RTTSListener listener);//RTTSListener为TTS监听器
-
-```
-
-<h3 id="4.2"> 2.停止使用TTS</h3>
-
-```Java
-VUIApi.getInstance().stopSpeak();
-```
-
-<h3 id="4.3">3.TTS监听器</h3>
+<h3 id="4.1">1.TTS监听器</h3>
 
 ```Java
 RTTSListener mRTTSListener = new RTTSListener() {
@@ -220,6 +206,21 @@ RTTSListener mRTTSListener = new RTTSListener() {
             public void onError(int code) {
             }
         }
+```
+    
+<h3 id="4.2"> 2.开始使用TTS</h3>
+
+```Java
+VUIApi.getInstance().speak(String text);//text为需要进行语音播报的文本
+
+VUIApi.getInstance().speak(String text, RTTSListener listener);//RTTSListener为TTS监听器
+
+```
+
+<h3 id="4.3"> 3.停止使用TTS</h3>
+
+```Java
+VUIApi.getInstance().stopSpeak();
 ```
   
 <h3 id="4.4"> 4.设置Speaker</h3>
