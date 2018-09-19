@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Demo</string>
+    <string name="start_vad_mode">开始录音</string>
+    <string name="down_start_asr_mode">长按开始录音</string>
+    <string name="stop_vad_mode">停止录音</string>
+    <string name="device_id">设备SN分配方式:</string>
+    <string name="recording">正在录音中....</string>
+    <string name="init_service">正在初始化服务</string>
+    <string name="tts_hint_init_complete">初始化成功，现在可以使用识别功能了</string>
+    <string name="device_id_empty">请根据SN分配方式，实现getDeviceID函数.</string>
+    <string name="jargon_instruction">[WAKEUP]通过语音唤醒，默认唤醒词是：智能管家；\n[VAD]语音端点检测,检查声音的开始和结束；\n[ASR]语音识别包括在线和离线，可以返回文本和语义解析后的结果；\n[TTS]文本转语音，可以支持在线和离线；</string>
+    <string name="sn_instruction"><Data><![CDATA[<font color="#ff0000"><b>[预分配SN并生产线烧录方式]:实现getDeviceID函数，返回值的是分配的SN号；<br>[通过唯一字串在线注册方式]:实现getDeviceID函数，返回值的是设备的唯一标识符，必须保证此标识符的唯一性；</b></font>]]></Data></string>
+</resources>
