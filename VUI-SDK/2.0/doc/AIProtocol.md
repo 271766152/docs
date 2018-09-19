@@ -1,10 +1,7 @@
 AI Protocol
 =
 
-*接下来，我们来看一下如何利用AI接口返回得数据。还记得我们得OnAIResponseListener嘛！  
-我们对它说“北京的天气怎么样？”。看看会发生什么。*  
-
-- **OnAIResponseListener  AI语义结果回调**  
+- **OnAIResponseListener AI语义结果回调**  
 ```Java
     //设置AI回调接口。AI返回的结果都在此接口中回调，如果不需要AI结果，可以不设置此回调接口。
     OnAIResponseListener aiResponseListener = new OnAIResponseListener() {
@@ -32,7 +29,7 @@ AI Protocol
         }
     };
 ```
-*我们来看下接口返回*
+返回的Json
 
 ```Json
 {
