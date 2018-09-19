@@ -33,14 +33,14 @@
     }
 ```
 
-- **我们需要你创建一个带有按钮的页面，就像这样**  
+- **创建一个带有按钮的页面**  
 
 <center>
 <img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo2.png" width="30%" height="30%" />
 </center>
 
 
-- **先从onCreate开始**  
+- **onCreate**  
 ```Java
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -83,8 +83,7 @@
     }
 ```
 
-- **initVUIParam(String deviceID)
-初始化之前，需要先初始化参数。像这样**  
+- **initVUIParam(String deviceID)初始化参数**    
 ```Java
     private void initVUIParam(String deviceID) {
         Log.d(TAG, "deviceID= " + deviceID);
@@ -128,10 +127,10 @@ InitListener  初始化回调**
     };
 ```
 
-- **reprotLocation() 不用担心，我们只是用它来得到您的大体位置，然后我们的AI才能知道您想干什么。比如：您说今天天气怎么样？**
+- **reprotLocation() 用于相关语义的解析**
 ```Java
     /**
-     * reprotLocation wifi信息，只有上报了wifi信息，当用户查询跟位置相关的信息时才会返回结果，比如：今天的天气怎么样
+     * reprotLocation wifi信息，只有上报了位置信息，才能使用跟位置相关的查询服务，比如：今天的天气怎么样
      */
     private void reprotLocation() {
         WifiManager wifiManager = (WifiManager) getApplication().getApplicationContext()
@@ -182,7 +181,7 @@ InitListener  初始化回调**
         }
     };
 ```
-- **当然还有我们的TTS**
+- **TTS**
 ```Java
 /**
      * ttsSpeak 播放tts
@@ -212,7 +211,7 @@ InitListener  初始化回调**
     }
 ```
 
-- **我们的handler**
+- **handler**
 ```Java
     private Handler handler = new Handler() {
         @Override
@@ -236,5 +235,4 @@ InitListener  初始化回调**
     };
 ```
 
-
-- **现在就可以运行你的App体验效果了。Have Fun！:blush:**  
+- **现在就可以运行你的App体验效果了。**  
