@@ -50,7 +50,12 @@ builder.setUserInfo(userInfo)//设置用户信息，必须设置（userInfo 参�
 
 参数 | 说明 | 必填  
 ------------ | ------------ | ------------ 
-setUserInfo(UserInfo userInfo) | deviceID信息必须设置，根据项目的SN分配方式 ：【预分配并生产线烧录方式】就设置分配的SN号；【通过唯一标识在线注册方式】就设置设备的唯一标识 | 是
+setUserInfo(UserInfo userInfo) | 设置信息如下：
+UserInfo userInfo = new UserInfo();
+//根据项目的SN分配方式 ：【预分配并生产线烧录方式】就设置分配的SN号；【通过唯一标识符在线注册方式】就设置设备的唯一标识符
+userInfo.setDeviceID(deviceID); //根据SN的方式设置此字段
+userInfo.setAgentID(appID); //产品ID，必须设置此字段
+userInfo.setPublicKey(publicKey); //产品公钥，必须设置此字段 | 是
 setVUIType(VUIType VUIType) | 设置VUI交互方式(唤醒后自动识别模式：VUIType.AUTO ， 手动且单次识别模式：VUIType.MANUAL) | 是
 setTTSType(TTSType ttsType) | 设置TTS在线(TTSType.TYPE_ONLINE)/设置TTS在线(TTSType.TYPE_OFFLINE) |是
 setTTSSpeaker(String speaker) | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")
