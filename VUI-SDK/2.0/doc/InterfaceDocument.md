@@ -84,8 +84,9 @@ VUIApi.getInstance().cancelRecognize();
 <h3 id="2.4"> 4.语音识别监听器</h3>
 
 ```Java
+//设置方法
 VUIApi.getInstance().setASRListener(RASRListener listener)
-
+//监听器
 RASRListener asrListener = new RASRListener() {
         @Override
         public void onASRResult(ASRResult result) {
