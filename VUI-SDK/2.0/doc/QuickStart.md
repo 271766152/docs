@@ -51,7 +51,7 @@
         setContentView(R.layout.activity_mode_vad);
 
         initView();
-        initVUIParam();
+        initVUIParam(getDeviceID());
     }
 ``` 
 
