@@ -4,9 +4,9 @@
 
 **VUISDK提供了多种输出模式，Demo中我们为您提供了3种最常用的输出模式。**
 
-- *模式一： WAKEUP + VAD + ASR + TTS*  
-- *模式二： VAD + ASR + TTS*  
-- *模式三： ASR + TTS*  
+- 模式一： WAKEUP + VAD + ASR + TTS  
+- 模式二： VAD + ASR + TTS  
+- 模式三： ASR + TTS  
 
 
 <center>
@@ -15,14 +15,15 @@
 
 **功能介绍**  
 
-- *[WAKEUP]: 为您提供语音唤醒设备的能力，默认唤醒词为“智能管家”。*  
-- *[VAD]: 为您提供语音端点检测的能力，检测语音的开始和结束。*  
-- *[ASR]: 为您提供语音识别的能力，支持在线和离线。为您返回语音识别的结果和语义结果。*  
-- *[TTS]: 为您提供文本转语音的能力，支持在线和离线。*   
+- [WAKEUP]: 为您提供语音唤醒设备的能力，默认唤醒词为“智能管家”。  
+- [VAD]: 为您提供语音端点检测的能力，检测语音的开始和结束。  
+- [ASR]: 为您提供语音识别的能力，支持在线和离线。为您返回语音识别的结果和语义结果。  
+- [TTS]: 为您提供文本转语音的能力，支持在线和离线。   
 
 **现在以模式二 VAD+ASR+TTS 为例开始我们的Demo。**  
-1. 导入sdk
-*目前SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-xx-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加。
+
+**1. 导入sdk**  
+目前SDK是以aar形式提供，所以需要使用Android Studio开发。把"ratn-release-xx-online.aar"拷贝到Libs文件夹下。在muoudle的build.gradle文件中添加。
 
 ``` gradle
     repositories {
@@ -34,14 +35,14 @@
     }
 ```
 
-2. 创建一个带有按钮的页面  
+**2. 创建一个带有按钮的页面**  
 
 <center>
 <img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo2.png" width="30%" height="30%" />
 </center>
 
 
-3. onCreate  
+**3. onCreate**  
 ```Java
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,7 +54,7 @@
     }
 ``` 
 
-4. view 初始化  
+**4. view 初始化**  
 ```Java
    private void initView() {
         asrResultText = (TextView) findViewById(R.id.result_vad_mode);
@@ -81,7 +82,7 @@
     }
 ```
 
-5. initVUIParam(String deviceID)初始化参数    
+**5. initVUIParam(String deviceID)初始化参数**    
 ```Java
     private void initVUIParam(String deviceID) {
         Log.d(TAG, "deviceID= " + deviceID);
@@ -101,9 +102,7 @@
     }
 ```
 
-6. getDeviceID  
-
-- *注：deveceID可以查看如何[申请SN号](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%96%B9%E6%B3%95.md)。*  
+**6. getDeviceID** *注：deveceID可以查看如何[申请SN号](https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/%E8%B4%A6%E5%8F%B7%E7%94%B3%E8%AF%B7%E6%96%B9%E6%B3%95.md)。*  
 ```Java
     /**
      * 获取设备唯一标识符，分为两种方式：
@@ -118,9 +117,9 @@
     }
 ```
 
-7. 其它重要的方法和监听器设置
+**7. 其它重要的方法和监听器设置**
 
-- InitListener  初始化回调  
+- **InitListener  初始化回调**  
 ```Java 
     InitListener initListener = new InitListener() {
         @Override
@@ -227,7 +226,7 @@
     }
 ```
 
-- **handler**
+- **Handler**
 ```Java
     private Handler handler = new Handler() {
         @Override
