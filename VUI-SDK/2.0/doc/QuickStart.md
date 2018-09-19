@@ -49,6 +49,8 @@
     private final static String APP_ID = "";//产品ID roobo分配
     private final static String PUBLIC_KEY = "";//产品公钥  roobo分配
 
+    ...
+    
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
