@@ -45,13 +45,17 @@
 
 **3. onCreate**  
 ```Java
+
+    private final static String APP_ID = "";//产品ID roobo分配
+    private final static String PUBLIC_KEY = "";//产品公钥  roobo分配
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mode_vad);
 
         initView();
-        initVUIParam(getDeviceID());
+        initVUIParam(getDeviceID(),APP_ID,PUBLIC_KEY);
     }
 ``` 
 
@@ -83,11 +87,19 @@
     }
 ```
 
-**5. initVUIParam(String deviceID)初始化参数**    
+**5. initVUIParam(String deviceID,String appID, String publicKey)初始化参数**    
 ```Java
-    private void initVUIParam(String deviceID) {
+    /**
+     * 初始化VUI SDK
+     * @param deviceID  设备SN号
+     * @param appID     产品ID roobo分配
+     * @param publicKey 产品公钥  roobo分配
+     */
+    private void initVUIParam(String deviceID,String appID, String publicKey) {
         Log.d(TAG, "deviceID= " + deviceID);
         UserInfo userInfo = new UserInfo();
+        userInfo.setAgentID(appID); //必须设置此字段
+        userInfo.setPublicKey(publicKey); //必须设置此字段
         userInfo.setDeviceID(deviceID); //必须设置此字段
 
         VUIApi.InitParam.InitParamBuilder builder = new VUIApi.InitParam.InitParamBuilder();
