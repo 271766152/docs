@@ -8,8 +8,6 @@
 - 模式二： VAD + ASR + TTS  
 - 模式三： ASR + TTS  
 
-<br></br>
-
 <center>
 <img src="https://github.com/271766152/docs/blob/master/VUI-SDK/2.0/doc/img/demo1.png" width="30%" height="30%" />
 </center>
