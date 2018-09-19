@@ -50,9 +50,9 @@ builder.setUserInfo(userInfo)//设置用户信息，必须设置（userInfo 参�
 
 参数 | 说明 | 必填  
 ------------ | ------------ | ------------ 
-setUserInfo(UserInfo userInfo) |  | 是
-setVUIType(VUIType VUIType) | 设置VUI交互方式(唤醒后自动识别模式：VUIType.AUTO ， 手动且单次识别模式：VUIType.MANUAL) | 是
-setTTSType(TTSType ttsType) | 设置TTS在线(TTSType.TYPE_ONLINE)/设置TTS在线(TTSType.TYPE_OFFLINE) |是
+setUserInfo(UserInfo userInfo) |设置信息如下：UserInfo userInfo = new UserInfo();<br>根据项目的SN分配方式 ：<br>【预分配并生产线烧录方式】就设置分配的SN号；<br>【通过唯一标识符在线注册方式】就设置设备的唯一标识符；<br>userInfo.setDeviceID(deviceID);//根据SN的方式设置此字段<br>userInfo.setAgentID(appID); //产品ID，必须设置此字段<br>  userInfo.setPublicKey(publicKey); //产品公钥，必须设置此字段  | 是
+setVUIType(VUIType VUIType) | 设置VUI交互方式<br>唤醒后自动识别模式：VUIType.AUTO <br>手动且单次识别模式：VUIType.MANUAL) | 是
+setTTSType(TTSType ttsType) | 设置TTS在线(TTSType.TYPE_ONLINE)<br>设置TTS在线(TTSType.TYPE_OFFLINE) |是
 setTTSSpeaker(String speaker) | 如果TTS采用离线方式，这里设置是发音人。如果是采用在线方式，这是设置的是TTS语言 |否(默认"Li-Li")
 setAudioGenerator(BaseAudioGenerator audioSource) | 设置语音识别的音源,设置为RooboAECRecorder,是带AEC功能 |是
 setLanguage(String language) | 设置ASR/TTS/AI的语言(例如："cmn-CHN",代表中文) | 否
